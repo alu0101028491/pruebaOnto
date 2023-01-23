@@ -33,4 +33,4 @@ jobs:
         run: java -jar jar/widoco.jar -ontFile rare-disease-simulation_v3.0.owl -rewriteAll -uniteSections -getOntologyMetadata -outFolder .
 
       - name: Rename index-en.html to index.html
-        run: mv doc/index-en.html doc/index.html
+        run: mv index-en.html index.html
