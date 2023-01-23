@@ -1,0 +1,3030 @@
+@prefix : <http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#> .
+
+<http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation> rdf:type owl:Ontology ;
+                                                                                owl:versionIRI <http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation/3.0> ;
+                                                                                <http://ainf.aau.at/ontodebug#testCase> _:genid1 ,
+                                                                                                                        _:genid2 ,
+                                                                                                                        _:genid3 ,
+                                                                                                                        _:genid4 ,
+                                                                                                                        _:genid5 ,
+                                                                                                                        _:genid6 ,
+                                                                                                                        _:genid7 ,
+                                                                                                                        _:genid8 ,
+                                                                                                                        _:genid9 ,
+                                                                                                                        _:genid10 ,
+                                                                                                                        _:genid11 ;
+                                                                                rdfs:comment "Ontology designed for the definition of parameters for the purpose of simulation by Discrete Events"@en .
+
+_:genid1 <http://ainf.aau.at/ontodebug#axiom> "hasDiseaseClinicalDiagnosisStrategy Domain Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid2 <http://ainf.aau.at/ontodebug#axiom> "hasDevelopment Domain DevelopmentModification" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid3 <http://ainf.aau.at/ontodebug#axiom> "hasReferences Domain Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid4 <http://ainf.aau.at/ontodebug#axiom> "hasInterventions Domain Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid5 <http://ainf.aau.at/ontodebug#axiom> "DevelopmentModification DisjointWith Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid6 <http://ainf.aau.at/ontodebug#axiom> "hasReferences Domain Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid7 <http://ainf.aau.at/ontodebug#axiom> "DevelopmentModification DisjointWith Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid8 <http://ainf.aau.at/ontodebug#axiom> "hasDiseaseClinicalDiagnosisStrategy Domain Disease" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid9 <http://ainf.aau.at/ontodebug#axiom> "hasDevelopment Domain DevelopmentModification" ;
+          <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid10 <http://ainf.aau.at/ontodebug#axiom> "PBD_ProfoundBiotinidaseDeficiency Type Disease" ;
+           <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid11 <http://ainf.aau.at/ontodebug#axiom> "hasInterventions Domain Disease" ;
+           <http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ainf.aau.at/ontodebug#axiom
+<http://ainf.aau.at/ontodebug#axiom> rdf:type owl:AnnotationProperty ;
+                                     rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
+
+
+###  http://ainf.aau.at/ontodebug#testCase
+<http://ainf.aau.at/ontodebug#testCase> rdf:type owl:AnnotationProperty .
+
+
+###  http://ainf.aau.at/ontodebug#type
+<http://ainf.aau.at/ontodebug#type> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasCharacteristic
+:hasCharacteristic rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasClinicalDiagnosis
+:hasClinicalDiagnosis rdf:type owl:ObjectProperty ;
+                      rdfs:domain :ClinicalDiagnosisStepStrategy ;
+                      rdfs:range :ClinicalDiagnosis .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasClinicalDiagnosisCost
+:hasClinicalDiagnosisCost rdf:type owl:ObjectProperty ;
+                          rdfs:domain :ClinicalDiagnosis ;
+                          rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasClinicalDiagnosisStepsStrategy
+:hasClinicalDiagnosisStepsStrategy rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :ClinicalDiagnosisStrategy ;
+                                   rdfs:range :ClinicalDiagnosisStepStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasClinicalDiganosisStrategyCost
+:hasClinicalDiganosisStrategyCost rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :ClinicalDiagnosisStrategy ;
+                                  rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDevelopment
+:hasDevelopment rdf:type owl:ObjectProperty ;
+                rdfs:domain :DevelopmentModification ;
+                rdfs:range :Development .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDevelopmentManifestations
+:hasDevelopmentManifestations rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Development ;
+                              rdfs:range :Manifestation .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDevelopmentModifications
+:hasDevelopmentModifications rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Intervention ;
+                             rdfs:range :DevelopmentModification .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDiseaseClinicalDiagnosisStrategy
+:hasDiseaseClinicalDiagnosisStrategy rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :Disease ;
+                                     rdfs:range :ClinicalDiagnosisStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDiseaseDevelopments
+:hasDiseaseDevelopments rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Disease ;
+                        rdfs:range :Development .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDiseaseFollowUpStrategy
+:hasDiseaseFollowUpStrategy rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Disease ;
+                            rdfs:range :FollowUpStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDiseaseScreeningStrategy
+:hasDiseaseScreeningStrategy rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Disease ;
+                             rdfs:range :ScreeningStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDiseaseTreatmentStrategy
+:hasDiseaseTreatmentStrategy rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Disease ;
+                             rdfs:range :TreatmentStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDrugCost
+:hasDrugCost rdf:type owl:ObjectProperty ;
+             rdfs:domain :Drug ;
+             rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDrugGuidelines
+:hasDrugGuidelines rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Drug ;
+                   rdfs:range :Guidelines .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDrugs
+:hasDrugs rdf:type owl:ObjectProperty ;
+          rdfs:domain :Treatment ;
+          rdfs:range :Drug .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUp
+:hasFollowUp rdf:type owl:ObjectProperty ;
+             rdfs:domain :FollowUpStepStrategy ;
+             rdfs:range :FollowUp .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUpCost
+:hasFollowUpCost rdf:type owl:ObjectProperty ;
+                 rdfs:domain :FollowUp ;
+                 rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUpGuidelines
+:hasFollowUpGuidelines rdf:type owl:ObjectProperty ;
+                       rdfs:domain :FollowUp ;
+                       rdfs:range :Guidelines .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUpStepsStrategy
+:hasFollowUpStepsStrategy rdf:type owl:ObjectProperty ;
+                          rdfs:domain :FollowUpStrategy ;
+                          rdfs:range :FollowUpStepStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUpStrategyCost
+:hasFollowUpStrategyCost rdf:type owl:ObjectProperty ;
+                         rdfs:domain :FollowUpStrategy ;
+                         rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFollowUpStrategyGuidelines
+:hasFollowUpStrategyGuidelines rdf:type owl:ObjectProperty ;
+                               rdfs:domain :FollowUpStrategy ;
+                               rdfs:range :Guidelines .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasInterventionClinicalDiagnosisStrategy
+:hasInterventionClinicalDiagnosisStrategy rdf:type owl:ObjectProperty ;
+                                          rdfs:domain :Intervention ;
+                                          rdfs:range :ClinicalDiagnosisStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasInterventionFollowUpStrategy
+:hasInterventionFollowUpStrategy rdf:type owl:ObjectProperty ;
+                                 rdfs:domain :Intervention ;
+                                 rdfs:range :FollowUpStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasInterventionScreeningStrategy
+:hasInterventionScreeningStrategy rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :Intervention ;
+                                  rdfs:range :ScreeningStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasInterventionTreatmentStrategy
+:hasInterventionTreatmentStrategy rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :Intervention ;
+                                  rdfs:range :TreatmentStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasInterventions
+:hasInterventions rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Disease ;
+                  rdfs:range :Intervention .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasManifestationCost
+:hasManifestationCost rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Manifestation ;
+                      rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasManifestationFollowUpStrategy
+:hasManifestationFollowUpStrategy rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :Manifestation ;
+                                  rdfs:range :FollowUpStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasManifestationModification
+:hasManifestationModification rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Intervention ;
+                              rdfs:range :ManifestationModification .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasManifestationTreatmentStrategy
+:hasManifestationTreatmentStrategy rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :Manifestation ;
+                                   rdfs:range :TreatmentStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasManifestations
+:hasManifestations rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ManifestationModification ;
+                   rdfs:range :Manifestation .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasPrecedingManifestation
+:hasPrecedingManifestation rdf:type owl:ObjectProperty ;
+                           rdfs:domain :PrecedingManifestations ;
+                           rdfs:range :Manifestation .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasPrecedingManifestations
+:hasPrecedingManifestations rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Manifestation ;
+                            rdfs:range :PrecedingManifestations .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasReferences
+:hasReferences rdf:type owl:ObjectProperty ;
+               rdfs:domain :Disease ;
+               rdfs:range :References .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasSatisfaction
+:hasSatisfaction rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Manifestation ;
+                 rdfs:range :Utility .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasScreening
+:hasScreening rdf:type owl:ObjectProperty ;
+              rdfs:domain :ScreeningStepStrategy ;
+              rdfs:range :Screening .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasScreeningCost
+:hasScreeningCost rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Screening ;
+                  rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasScreeningStepsStrategy
+:hasScreeningStepsStrategy rdf:type owl:ObjectProperty ;
+                           rdfs:domain :ScreeningStrategy ;
+                           rdfs:range :ScreeningStepStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasScreeningStrategyCost
+:hasScreeningStrategyCost rdf:type owl:ObjectProperty ;
+                          rdfs:domain :ScreeningStrategy ;
+                          rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatment
+:hasTreatment rdf:type owl:ObjectProperty ;
+              rdfs:domain :TreatmentStepStrategy ;
+              rdfs:range :Treatment .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatmentCost
+:hasTreatmentCost rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Treatment ;
+                  rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatmentGuidelines
+:hasTreatmentGuidelines rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Treatment ;
+                        rdfs:range :Guidelines .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatmentStepsStrategy
+:hasTreatmentStepsStrategy rdf:type owl:ObjectProperty ;
+                           rdfs:domain :TreatmentStrategy ;
+                           rdfs:range :TreatmentStepStrategy .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatmentStrategyCost
+:hasTreatmentStrategyCost rdf:type owl:ObjectProperty ;
+                          rdfs:domain :TreatmentStrategy ;
+                          rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTreatmentStrategyGuidelines
+:hasTreatmentStrategyGuidelines rdf:type owl:ObjectProperty ;
+                                rdfs:domain :TreatmentStrategy ;
+                                rdfs:range :Guidelines .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasUtility
+:hasUtility rdf:type owl:ObjectProperty ;
+            rdfs:domain :Guidelines ,
+                        :Manifestation ;
+            rdfs:range :Utility .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasAgeOfFirstPresentation
+:hasAgeOfFirstPresentation rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Age of First Presentation" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasAmount
+:hasAmount rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasCalculateMethod
+:hasCalculateMethod rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasConditions
+:hasConditions rdf:type owl:DatatypeProperty ;
+               rdfs:comment "It allows expressing conditions based on parameters that we will find in the model. For example, we can find that certain drugs will be administered depending on the weight or age of the patient. The language in which the conditions are expressed is in EL format (Expression Language: JSR-341)." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasCountry
+:hasCountry rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Country in which the cost data is collected" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Description of the cost" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDose
+:hasDose rdf:type owl:DatatypeProperty ;
+         rdfs:comment "Dosage of the indicated drug" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasDuration
+:hasDuration rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasEndAge
+:hasEndAge rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFrequency
+:hasFrequency rdf:type owl:DatatypeProperty ;
+              rdfs:comment """Indicates the time cycle of how often the treatment, the follow-up test or their respective strategies have to be applied. In the case of a manifestation of the disease, it will indicate how many times a year the symptom manifests itself. 
+
+By default = 1, for the Manifestations.""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasFrequencyModification
+:hasFrequencyModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasHoursInterval
+:hasHoursInterval rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Interval in which the indicated dose of drug should be given." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasIdentifier
+:hasIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Stores the identifier of an instance. The objective of this field is to facilitate the identification and relationship between instances with a view to software programming." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasKindDevelopment
+:hasKindDevelopment rdf:type owl:DatatypeProperty ;
+                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                 owl:oneOf [ rdf:type rdf:List ;
+                                             rdf:first "MODIFIED" ;
+                                             rdf:rest [ rdf:type rdf:List ;
+                                                        rdf:first "NATURAL" ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                           ]
+                               ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasKindIntervention
+:hasKindIntervention rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:oneOf [ rdf:type rdf:List ;
+                                              rdf:first "NO_SCREENING" ;
+                                              rdf:rest [ rdf:type rdf:List ;
+                                                         rdf:first "SCREENING" ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                            ]
+                                ] ;
+                     rdfs:comment "Kind" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasKindManifestation
+:hasKindManifestation rdf:type owl:DatatypeProperty ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:oneOf [ rdf:type rdf:List ;
+                                               rdf:first "ACUTE" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "CHRONIC" ;
+                                                          rdf:rest rdf:nil
+                                                        ]
+                                             ]
+                                 ] ;
+                      rdfs:comment "Acute or Chronic" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasKindUtility
+:hasKindUtility rdf:type owl:DatatypeProperty ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:oneOf [ rdf:type rdf:List ;
+                                         rdf:first "DISUTILITY" ;
+                                         rdf:rest [ rdf:type rdf:List ;
+                                                    rdf:first "UTILITY" ;
+                                                    rdf:rest rdf:nil
+                                                  ]
+                                       ]
+                           ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasLifeExpectancy
+:hasLifeExpectancy rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Life Expectancy" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasLifeExpectancyModification
+:hasLifeExpectancyModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasModificationForAllParams
+:hasModificationForAllParams rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasMortalityFactor
+:hasMortalityFactor rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "By default = 1" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasMortalityFactorModification
+:hasMortalityFactorModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasName
+:hasName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasOnSetAge
+:hasOnSetAge rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasOrderStep
+:hasOrderStep rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasPercentForTheNext
+:hasPercentForTheNext rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasPercentageTreated
+:hasPercentageTreated rdf:type owl:DatatypeProperty ;
+                      rdfs:comment """The percentage stored in this property will reflect the percentage of the application to which the treatment in which it is defined will be applied.
+
+Value format: ACUTE=XXX,CHRONIC=YYY""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasPrevalenceAtBirth
+:hasPrevalenceAtBirth rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "The prevalence of a disease is the total number of individuals presenting an attribute or disease at a time or during a period divided by the population at that point in time or in the middle of the period. Quantifies the proportion of people in a population who have a disease (or any other event) at a given time and provides an estimate of the proportion of subjects in that population who have the disease at that time." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasProbability
+:hasProbability rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Probability" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasProbabilityModification
+:hasProbabilityModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasProbabilityOfLeadingToDiagnosis
+:hasProbabilityOfLeadingToDiagnosis rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Probability that the manifestation presented, the clinical diagnosis is made." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasProbabilityOfLeadingToDiagnosisModification
+:hasProbabilityOfLeadingToDiagnosisModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRange
+:hasRange rdf:type owl:DatatypeProperty ;
+          rdfs:comment """Age range in which the drug will be delivered.
+
+Examples: 
+   0y-2y    => 0 years to 2 years
+   3m-2y   => 3 months to 2 years""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRefToGARD
+:hasRefToGARD rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRefToOMIM
+:hasRefToOMIM rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRefToORDO
+:hasRefToORDO rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRelativeRisk
+:hasRelativeRisk rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasRelativeRiskModification
+:hasRelativeRiskModification rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasReplacePrevious
+:hasReplacePrevious rdf:type owl:DatatypeProperty ;
+                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                 owl:oneOf [ rdf:type rdf:List ;
+                                             rdf:first "FALSE" ;
+                                             rdf:rest [ rdf:type rdf:List ;
+                                                        rdf:first "TRUE" ;
+                                                        rdf:rest rdf:nil
+                                                      ]
+                                           ]
+                               ] ;
+                    rdfs:comment "Indicates that a manifestation at a given moment replaces the manifestation it follows" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasSensitivity
+:hasSensitivity rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The Sensitivity in epidemiology is the Probability of correctly classifying a sick individual, that is, the Probability that a positive result will be obtained in a diagnostic test for a sick subject. The Sensitivity is, therefore, the ability of the complementary test to detect the disease. Sensitivity is the percentage of true positives or the Probability that the test is positive if the disease is present; False negatives are sick subjects diagnosed as healthy." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasSource
+:hasSource rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasSpecificity
+:hasSpecificity rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Start Age" ,
+                             "The Specificity of a test is the Probability that a healthy subject will have a negative test result. Specificity is the percentage of true negatives or the Probability that the test will be negative if the disease is not present. False positives are healthy subjects diagnosed as sick." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasStage
+:hasStage rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Stage of the development of the disease" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTemporalBehavior
+:hasTemporalBehavior rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:oneOf [ rdf:type rdf:List ;
+                                              rdf:first "ANNUAL" ;
+                                              rdf:rest [ rdf:type rdf:List ;
+                                                         rdf:first "LIFETIME" ;
+                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                    rdf:first "ONETIME" ;
+                                                                    rdf:rest rdf:nil
+                                                                  ]
+                                                       ]
+                                            ]
+                                ] ;
+                     rdfs:comment """ONETIME: the cost/utility applies only once at the time of the event.
+LIFETIME: the cost/utility the cost represents the total applied to the patient's life.
+ANNUAL: the cost/utility indicates that the indicated value affects annually throughout the patient's life.""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasTemporaryThreshold
+:hasTemporaryThreshold rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Time limit in which the sample must be made. For example on the third day of birth. This value must be expressed in number of days." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasValue
+:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#hasYear
+:hasYear rdf:type owl:DatatypeProperty ;
+         rdfs:comment "Year in which the cost data is collected" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ClinicalDiagnosis
+:ClinicalDiagnosis rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDescription ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasIdentifier ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasSensitivity ;
+                                     owl:someValuesFrom xsd:double
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasSpecificity ;
+                                     owl:someValuesFrom xsd:double
+                                   ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ClinicalDiagnosisStepStrategy
+:ClinicalDiagnosisStepStrategy rdf:type owl:Class ;
+                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasDescription ;
+                                                 owl:someValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasPercentForTheNext ;
+                                                 owl:someValuesFrom xsd:double
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasOrderStep ;
+                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onDataRange xsd:short
+                                               ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ClinicalDiagnosisStrategy
+:ClinicalDiagnosisStrategy rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasClinicalDiagnosisStepsStrategy ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :ClinicalDiagnosisStepStrategy
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasDescription ;
+                                             owl:someValuesFrom xsd:string
+                                           ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Cost
+:Cost rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasAmount ;
+                        owl:someValuesFrom xsd:double
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCountry ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDescription ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTemporalBehavior ;
+                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                             owl:oneOf [ rdf:type rdf:List ;
+                                                         rdf:first "ANNUAL" ;
+                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                    rdf:first "LIFETIME" ;
+                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                               rdf:first "ONETIME" ;
+                                                                               rdf:rest rdf:nil
+                                                                             ]
+                                                                  ]
+                                                       ]
+                                           ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasYear ;
+                        owl:someValuesFrom xsd:short
+                      ] ;
+      rdfs:comment "Costs are always assumed to be annual." .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Development
+:Development rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDescription ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasKindDevelopment ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLifeExpectancy ;
+                               owl:someValuesFrom xsd:double
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasStage ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:short
+                             ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#DevelopmentModification
+:DevelopmentModification rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasDescription ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasLifeExpectancyModification ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:double
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasModificationForAllParams ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:double
+                                         ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Disease
+:Disease rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDescription ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasIdentifier ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPrevalenceAtBirth ;
+                           owl:someValuesFrom xsd:double
+                         ] ;
+         rdfs:comment "Common definition for common diseases." ;
+         rdfs:label "Disease" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Drug
+:Drug rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDescription ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasIdentifier ;
+                        owl:someValuesFrom xsd:string
+                      ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#FollowUp
+:FollowUp rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDescription ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasIdentifier ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#FollowUpStepStrategy
+:FollowUpStepStrategy rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasDescription ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasPercentForTheNext ;
+                                        owl:someValuesFrom xsd:double
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasOrderStep ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:short
+                                      ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#FollowUpStrategy
+:FollowUpStrategy rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDescription ;
+                                    owl:someValuesFrom xsd:string
+                                  ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Guidelines
+:Guidelines rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasDescription ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasConditions ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:double
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasDose ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:double
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasFrequency ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:double
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasHoursInterval ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:double
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRange ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Intervention
+:Intervention rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDescription ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasKindIntervention ;
+                                owl:someValuesFrom xsd:string
+                              ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Manifestation
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDescription ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDuration ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasEndAge ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasFrequency ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasIdentifier ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasMortalityFactor ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasOnSetAge ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasProbability ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasProbabilityOfLeadingToDiagnosis ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasRelativeRisk ;
+                                 owl:someValuesFrom xsd:double
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasKindManifestation ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                               rdf:first "ACUTE" ;
+                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                          rdf:first "CHRONIC" ;
+                                                                          rdf:rest rdf:nil
+                                                                        ]
+                                                             ]
+                                                 ]
+                               ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ManifestationModification
+:ManifestationModification rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasDescription ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasProbabilityOfLeadingToDiagnosisModification ;
+                                             owl:someValuesFrom xsd:double
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasFrequencyModification ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:double
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasMortalityFactorModification ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:double
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasProbabilityModification ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasRelativeRiskModification ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:double
+                                           ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#PrecedingManifestations
+:PrecedingManifestations rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasDescription ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasProbability ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasReplacePrevious ;
+                                           owl:someValuesFrom xsd:string
+                                         ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#References
+:References rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasDescription ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRefToGARD ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRefToOMIM ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRefToORDO ;
+                              owl:someValuesFrom xsd:string
+                            ] ;
+            rdfs:comment "This entity has relationships with other repositories" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Screening
+:Screening rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDescription ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasIdentifier ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSensitivity ;
+                             owl:someValuesFrom xsd:double
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSpecificity ;
+                             owl:someValuesFrom xsd:double
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTemporaryThreshold ;
+                             owl:someValuesFrom xsd:double
+                           ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ScreeningStepStrategy
+:ScreeningStepStrategy rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasDescription ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasPercentForTheNext ;
+                                         owl:someValuesFrom xsd:double
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasOrderStep ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:short
+                                       ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#ScreeningStrategy
+:ScreeningStrategy rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasScreeningStepsStrategy ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :ScreeningStepStrategy
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDescription ;
+                                     owl:someValuesFrom xsd:string
+                                   ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Treatment
+:Treatment rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDescription ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasPercentageTreated ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasIdentifier ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#TreatmentStepStrategy
+:TreatmentStepStrategy rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasDescription ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasPercentForTheNext ;
+                                         owl:someValuesFrom xsd:double
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasOrderStep ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:short
+                                       ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#TreatmentStrategy
+:TreatmentStrategy rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDescription ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasPercentageTreated ;
+                                     owl:someValuesFrom xsd:string
+                                   ] .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#Utility
+:Utility rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCalculateMethod ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDescription ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasKindUtility ;
+                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "DISUTILITY" ;
+                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                       rdf:first "UTILITY" ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                          ]
+                                              ]
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSource ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasTemporalBehavior ;
+                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "ANNUAL" ;
+                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                       rdf:first "LIFETIME" ;
+                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                  rdf:first "ONETIME" ;
+                                                                                  rdf:rest rdf:nil
+                                                                                ]
+                                                                     ]
+                                                          ]
+                                              ]
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasValue ;
+                           owl:someValuesFrom xsd:double
+                         ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Drug_CefotaximaIV
+:SCD_Cost_Drug_CefotaximaIV rdf:type owl:NamedIndividual ,
+                                     :Cost ;
+                            :hasAmount "0.0021075" ;
+                            :hasDescription "FILL-ME" ;
+                            :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Drug_Penicillin
+:SCD_Cost_Drug_Penicillin rdf:type owl:NamedIndividual ,
+                                   :Cost ;
+                          :hasAmount "0.0006492" ;
+                          :hasDescription "FILL-ME" ;
+                          :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Drug_Pneumo23
+:SCD_Cost_Drug_Pneumo23 rdf:type owl:NamedIndividual ,
+                                 :Cost ;
+                        :hasAmount "14.69" ;
+                        :hasDescription "FILL-ME" ;
+                        :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Drug_Prevenar13
+:SCD_Cost_Drug_Prevenar13 rdf:type owl:NamedIndividual ,
+                                   :Cost ;
+                          :hasAmount "76.74" ;
+                          :hasDescription "FILL-ME" ;
+                          :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Drug_VancomicinaIV
+:SCD_Cost_Drug_VancomicinaIV rdf:type owl:NamedIndividual ,
+                                      :Cost ;
+                             :hasAmount "0.0069709" ;
+                             :hasDescription "FILL-ME" ;
+                             :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_AbdominalEcho
+:SCD_Cost_FollowUp_AbdominalEcho rdf:type owl:NamedIndividual ,
+                                          :Cost ;
+                                 :hasAmount "93.98" ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_Audiometry
+:SCD_Cost_FollowUp_Audiometry rdf:type owl:NamedIndividual ,
+                                       :Cost ;
+                              :hasAmount "197.32" ;
+                              :hasDescription "FILL-ME" ;
+                              :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_BasicUrineProfile
+:SCD_Cost_FollowUp_BasicUrineProfile rdf:type owl:NamedIndividual ,
+                                              :Cost ;
+                                     :hasAmount "7.71" ;
+                                     :hasDescription "FILL-ME" ;
+                                     :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_CardiologicalEvaluation
+:SCD_Cost_FollowUp_CardiologicalEvaluation rdf:type owl:NamedIndividual ,
+                                                    :Cost ;
+                                           :hasAmount "154.85" ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_CreatinineClearance
+:SCD_Cost_FollowUp_CreatinineClearance rdf:type owl:NamedIndividual ,
+                                                :Cost ;
+                                       :hasAmount "0.21"^^xsd:double ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_Ferritin
+:SCD_Cost_FollowUp_Ferritin rdf:type owl:NamedIndividual ,
+                                     :Cost ;
+                            :hasAmount "8.39" ;
+                            :hasDescription "FILL-ME" ;
+                            :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_FollowUpInOphthalmology
+:SCD_Cost_FollowUp_FollowUpInOphthalmology rdf:type owl:NamedIndividual ,
+                                                    :Cost ;
+                                           :hasAmount "193.08" ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_Hb_S
+:SCD_Cost_FollowUp_Hb_S rdf:type owl:NamedIndividual ,
+                                 :Cost ;
+                        :hasAmount "25.48" ;
+                        :hasDescription "FILL-ME" ;
+                        :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_HealthEducationByNursing
+:SCD_Cost_FollowUp_HealthEducationByNursing rdf:type owl:NamedIndividual ,
+                                                     :Cost ;
+                                            :hasAmount "107.56" ;
+                                            :hasDescription "FILL-ME" ;
+                                            :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_HemoglobinF
+:SCD_Cost_FollowUp_HemoglobinF rdf:type owl:NamedIndividual ,
+                                        :Cost ;
+                               :hasAmount "30.80" ;
+                               :hasDescription "FILL-ME" ;
+                               :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_Hemogram_Biochemistry
+:SCD_Cost_FollowUp_Hemogram_Biochemistry rdf:type owl:NamedIndividual ,
+                                                  :Cost ;
+                                         :hasAmount "15.28"^^xsd:double ;
+                                         :hasDescription "FILL-ME (12.29+2.99)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_MagneticResonance
+:SCD_Cost_FollowUp_MagneticResonance rdf:type owl:NamedIndividual ,
+                                              :Cost ;
+                                     :hasAmount "389.03" ;
+                                     :hasDescription "FILL-ME" ;
+                                     :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_MicroAlbuminInUrine
+:SCD_Cost_FollowUp_MicroAlbuminInUrine rdf:type owl:NamedIndividual ,
+                                                :Cost ;
+                                       :hasAmount "4.83" ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_PediatricConsultation
+:SCD_Cost_FollowUp_PediatricConsultation rdf:type owl:NamedIndividual ,
+                                                  :Cost ;
+                                         :hasAmount "79.65" ;
+                                         :hasDescription "FILL-ME" ;
+                                         :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_PediatricDentistryReview
+:SCD_Cost_FollowUp_PediatricDentistryReview rdf:type owl:NamedIndividual ,
+                                                     :Cost ;
+                                            :hasAmount "45.07" ;
+                                            :hasDescription "FILL-ME" ;
+                                            :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_PulseOximetry
+:SCD_Cost_FollowUp_PulseOximetry rdf:type owl:NamedIndividual ,
+                                          :Cost ;
+                                 :hasAmount "179.24" ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_RXChest
+:SCD_Cost_FollowUp_RXChest rdf:type owl:NamedIndividual ,
+                                    :Cost ;
+                           :hasAmount "149.27" ;
+                           :hasDescription "FILL-ME" ;
+                           :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_ReticulocyteCount
+:SCD_Cost_FollowUp_ReticulocyteCount rdf:type owl:NamedIndividual ,
+                                              :Cost ;
+                                     :hasAmount "7.94" ;
+                                     :hasDescription "FILL-ME" ;
+                                     :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_FollowUp_TranscranialEchoDoppler
+:SCD_Cost_FollowUp_TranscranialEchoDoppler rdf:type owl:NamedIndividual ,
+                                                    :Cost ;
+                                           :hasAmount "188.70" ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Screening_Technique
+:SCD_Cost_Screening_Technique rdf:type owl:NamedIndividual ,
+                                       :Cost ;
+                              :hasAmount "2.5"^^xsd:double ;
+                              :hasDescription "FILL-ME" ;
+                              :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_CTScanner
+:SCD_Cost_Treatment_CTScanner rdf:type owl:NamedIndividual ,
+                                       :Cost ;
+                              :hasAmount "241.11" ;
+                              :hasDescription "FILL-ME" ;
+                              :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_ExchangeTransfusion
+:SCD_Cost_Treatment_ExchangeTransfusion rdf:type owl:NamedIndividual ,
+                                                 :Cost ;
+                                        :hasAmount "1204.68" ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_HospitalStay
+:SCD_Cost_Treatment_HospitalStay rdf:type owl:NamedIndividual ,
+                                          :Cost ;
+                                 :hasAmount "647.90" ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_SimpleTransfusion
+:SCD_Cost_Treatment_SimpleTransfusion rdf:type owl:NamedIndividual ,
+                                               :Cost ;
+                                      :hasAmount "111.11" ;
+                                      :hasDescription "FILL-ME" ;
+                                      :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_Splenectomy
+:SCD_Cost_Treatment_Splenectomy rdf:type owl:NamedIndividual ,
+                                         :Cost ;
+                                :hasAmount "9790.21" ;
+                                :hasDescription "FILL-ME" ;
+                                :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Cost_Treatment_UciStay
+:SCD_Cost_Treatment_UciStay rdf:type owl:NamedIndividual ,
+                                     :Cost ;
+                            :hasAmount "3103.14" ;
+                            :hasDescription "FILL-ME" ;
+                            :hasTemporalBehavior "ONETIME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Development_Natural
+:SCD_Development_Natural rdf:type owl:NamedIndividual ,
+                                  :Development ;
+                         :hasDevelopmentManifestations :SCD_Manif_Anemia ,
+                                                       :SCD_Manif_ChestSyndrome ,
+                                                       :SCD_Manif_HearingLoss ,
+                                                       :SCD_Manif_Meningitis ,
+                                                       :SCD_Manif_MentalRetardation ,
+                                                       :SCD_Manif_PneumococcalSepsis ,
+                                                       :SCD_Manif_Seizure ,
+                                                       :SCD_Manif_SplenicSequestration ,
+                                                       :SCD_Manif_SplenicSequestration_Recurrent ,
+                                                       :SCD_Manif_Stroke ,
+                                                       :SCD_Manif_Stroke_Dependence ,
+                                                       :SCD_Manif_Stroke_Dependence_Recurrent ,
+                                                       :SCD_Manif_Stroke_Recurrent ;
+                         :hasDescription "FILL-ME" ;
+                         :hasKindDevelopment "NATURAL" ;
+                         :hasLifeExpectancy "82.065" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disease_SickleCell
+:SCD_Disease_SickleCell rdf:type owl:NamedIndividual ,
+                                 :Disease ;
+                        :hasDiseaseDevelopments :SCD_Development_Natural ;
+                        :hasDiseaseFollowUpStrategy :SCD_Strategy_FollowUp ;
+                        :hasDiseaseTreatmentStrategy :SCD_Strategy_Treatment_General ;
+                        :hasInterventions :SCD_Intervention_NoScreening ,
+                                          :SCD_Intervention_Screening ;
+                        :hasReferences :SCD_References ;
+                        :hasDescription "FILL-ME" ;
+                        :hasIdentifier "PRUEBA" ;
+                        :hasPrevalenceAtBirth "0.01693#BETA(119;665.194)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disutility_Manif_HearingLoss
+:SCD_Disutility_Manif_HearingLoss rdf:type owl:NamedIndividual ,
+                                           :Utility ;
+                                  :hasDescription "FILL-ME" ;
+                                  :hasKindUtility "DISUTILITY" ;
+                                  :hasTemporalBehavior "ANNUAL" ;
+                                  :hasValue "0.14#NORMAL(0.14,0.19)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disutility_Manif_MentalRetardation
+:SCD_Disutility_Manif_MentalRetardation rdf:type owl:NamedIndividual ,
+                                                 :Utility ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasKindUtility "DISUTILITY" ;
+                                        :hasTemporalBehavior "ANNUAL" ;
+                                        :hasValue "0.41#NORMAL(0.41,0.27)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disutility_Manif_Seizure
+:SCD_Disutility_Manif_Seizure rdf:type owl:NamedIndividual ,
+                                       :Utility ;
+                              :hasDescription "FILL-ME" ;
+                              :hasKindUtility "DISUTILITY" ;
+                              :hasTemporalBehavior "ANNUAL" ;
+                              :hasValue "0.3#NORMAL(0.3,0.25)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disutility_Treatment_ExchangeTransfusion
+:SCD_Disutility_Treatment_ExchangeTransfusion rdf:type owl:NamedIndividual ,
+                                                       :Utility ;
+                                              :hasDescription "FILL-ME" ;
+                                              :hasKindUtility "DISUTILITY" ;
+                                              :hasTemporalBehavior "ANNUAL" ;
+                                              :hasValue "0.125" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Disutility_Treatment_Transfusion
+:SCD_Disutility_Treatment_Transfusion rdf:type owl:NamedIndividual ,
+                                               :Utility ;
+                                      :hasDescription "FILL-ME" ;
+                                      :hasKindUtility "DISUTILITY" ;
+                                      :hasTemporalBehavior "ANNUAL" ;
+                                      :hasValue "0.125" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Drug_CefotaximaIV
+:SCD_Drug_CefotaximaIV rdf:type owl:NamedIndividual ,
+                                :Drug ;
+                       :hasDrugCost :SCD_Cost_Drug_CefotaximaIV ;
+                       :hasDrugGuidelines :SCD_Guidelines_Drug_CefotaximaIV ;
+                       :hasDescription "FILL-ME" ;
+                       :hasIdentifier "CefotaximaIV" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Drug_Penicillin
+:SCD_Drug_Penicillin rdf:type owl:NamedIndividual ,
+                              :Drug ;
+                     :hasDrugCost :SCD_Cost_Drug_Penicillin ;
+                     :hasDrugGuidelines :SCD_Guidelines_Drug_Penicillin_Initial ,
+                                        :SCD_Guidelines_Drug_Penicillin_Wless25 ,
+                                        :SCD_Guidelines_Drug_Penicillin_Wless25_Splenectomy ,
+                                        :SCD_Guidelines_Drug_Penicillin_Wmore25 ,
+                                        :SCD_Guidelines_Drug_Penicillin_Wmore25_Splenectomy ;
+                     :hasDescription "FILL-ME" ;
+                     :hasIdentifier "Penicillin" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Drug_Pneumo23
+:SCD_Drug_Pneumo23 rdf:type owl:NamedIndividual ,
+                            :Drug ;
+                   :hasDrugCost :SCD_Cost_Drug_Pneumo23 ;
+                   :hasDrugGuidelines :SCD_Guidelines_Drug_Pneumo23 ;
+                   :hasDescription "FILL-ME" ;
+                   :hasIdentifier "PNEUMO23" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Drug_Prevenar13
+:SCD_Drug_Prevenar13 rdf:type owl:NamedIndividual ,
+                              :Drug ;
+                     :hasDrugCost :SCD_Cost_Drug_Prevenar13 ;
+                     :hasDrugGuidelines :SCD_Guidelines_Drug_Prevenar13 ;
+                     :hasDescription "FILL-ME" ;
+                     :hasIdentifier "PREVENAR13" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Drug_VancomicinaIV
+:SCD_Drug_VancomicinaIV rdf:type owl:NamedIndividual ,
+                                 :Drug ;
+                        :hasDrugCost :SCD_Cost_Drug_VancomicinaIV ;
+                        :hasDrugGuidelines :SCD_Guidelines_Drug_VancomicinaIV ;
+                        :hasDescription "FILL-ME" ;
+                        :hasIdentifier "VancomicinaIV" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_AbdominalEcho
+:SCD_FollowUp_AbdominalEcho rdf:type owl:NamedIndividual ,
+                                     :FollowUp ;
+                            :hasFollowUpCost :SCD_Cost_FollowUp_AbdominalEcho ;
+                            :hasFollowUpGuidelines :SCD_Guidelines_FwUp_AbdominalEcho ;
+                            :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_Audiometry
+:SCD_FollowUp_Audiometry rdf:type owl:NamedIndividual ,
+                                  :FollowUp ;
+                         :hasFollowUpCost :SCD_Cost_FollowUp_Audiometry ;
+                         :hasFollowUpGuidelines :SCD_Guidelines_FwUp_Audiometry ;
+                         :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_BasicUrineProfile
+:SCD_FollowUp_BasicUrineProfile rdf:type owl:NamedIndividual ,
+                                         :FollowUp ;
+                                :hasFollowUpCost :SCD_Cost_FollowUp_BasicUrineProfile ;
+                                :hasFollowUpGuidelines :SCD_Guidelines_FwUp_BasicUrineProfile ;
+                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_CardiologicalEvaluation
+:SCD_FollowUp_CardiologicalEvaluation rdf:type owl:NamedIndividual ,
+                                               :FollowUp ;
+                                      :hasFollowUpCost :SCD_Cost_FollowUp_CardiologicalEvaluation ;
+                                      :hasFollowUpGuidelines :SCD_Guidelines_FwUp_CardiologicalEvaluation ;
+                                      :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_CreatinineClearance
+:SCD_FollowUp_CreatinineClearance rdf:type owl:NamedIndividual ,
+                                           :FollowUp ;
+                                  :hasFollowUpCost :SCD_Cost_FollowUp_CreatinineClearance ;
+                                  :hasFollowUpGuidelines :SCD_Guidelines_FwUp_CreatinineClearance ;
+                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_Ferritin
+:SCD_FollowUp_Ferritin rdf:type owl:NamedIndividual ,
+                                :FollowUp ;
+                       :hasFollowUpCost :SCD_Cost_FollowUp_Ferritin ;
+                       :hasFollowUpGuidelines :SCD_Guidelines_FwUp_Ferritin ;
+                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_FollowUpInNeurology
+:SCD_FollowUp_FollowUpInNeurology rdf:type owl:NamedIndividual ,
+                                           :FollowUp ;
+                                  :hasFollowUpGuidelines :SCD_Guidelines_FwUp_FollowUpInNeurology ;
+                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_FollowUpInOphthalmology
+:SCD_FollowUp_FollowUpInOphthalmology rdf:type owl:NamedIndividual ,
+                                               :FollowUp ;
+                                      :hasFollowUpCost :SCD_Cost_FollowUp_FollowUpInOphthalmology ;
+                                      :hasFollowUpGuidelines :SCD_Guidelines_FwUp_FollowUpInOphthalmology_A ,
+                                                             :SCD_Guidelines_FwUp_FollowUpInOphthalmology_B ;
+                                      :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_Hb_S
+:SCD_FollowUp_Hb_S rdf:type owl:NamedIndividual ,
+                            :FollowUp ;
+                   :hasFollowUpCost :SCD_Cost_FollowUp_Hb_S ;
+                   :hasFollowUpGuidelines :SCD_Guidelines_FwUp_Hb_S ;
+                   :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_HealthEducationByNursing
+:SCD_FollowUp_HealthEducationByNursing rdf:type owl:NamedIndividual ,
+                                                :FollowUp ;
+                                       :hasFollowUpCost :SCD_Cost_FollowUp_HealthEducationByNursing ;
+                                       :hasFollowUpGuidelines :SCD_Guidelines_FwUp_HealthEducationByNursing ;
+                                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_HemoglobinF
+:SCD_FollowUp_HemoglobinF rdf:type owl:NamedIndividual ,
+                                   :FollowUp ;
+                          :hasFollowUpCost :SCD_Cost_FollowUp_HemoglobinF ;
+                          :hasFollowUpGuidelines :SCD_Guidelines_FwUp_HemoglobinF ;
+                          :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_Hemogram_Biochemistry
+:SCD_FollowUp_Hemogram_Biochemistry rdf:type owl:NamedIndividual ,
+                                             :FollowUp ;
+                                    :hasFollowUpCost :SCD_Cost_FollowUp_Hemogram_Biochemistry ;
+                                    :hasFollowUpGuidelines :SCD_Guidelines_FwUp_Hemogram_Biochemistry ;
+                                    :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_MagneticResonance
+:SCD_FollowUp_MagneticResonance rdf:type owl:NamedIndividual ,
+                                         :FollowUp ;
+                                :hasFollowUpCost :SCD_Cost_FollowUp_MagneticResonance ;
+                                :hasFollowUpGuidelines :SCD_Guidelines_FwUp_MagneticResonance ;
+                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_MicroAlbuminInUrine
+:SCD_FollowUp_MicroAlbuminInUrine rdf:type owl:NamedIndividual ,
+                                           :FollowUp ;
+                                  :hasFollowUpCost :SCD_Cost_FollowUp_MicroAlbuminInUrine ;
+                                  :hasFollowUpGuidelines :SCD_Guidelines_FwUp_MicroAlbuminInUrine ;
+                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_PediatricConsultation
+:SCD_FollowUp_PediatricConsultation rdf:type owl:NamedIndividual ,
+                                             :FollowUp ;
+                                    :hasFollowUpCost :SCD_Cost_FollowUp_PediatricConsultation ;
+                                    :hasFollowUpGuidelines :SCD_Guidelines_FwUp_PediatricConsultation ;
+                                    :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_PediatricDentistryReview
+:SCD_FollowUp_PediatricDentistryReview rdf:type owl:NamedIndividual ,
+                                                :FollowUp ;
+                                       :hasFollowUpCost :SCD_Cost_FollowUp_PediatricDentistryReview ;
+                                       :hasFollowUpGuidelines :SCD_Guidelines_FwUp_PediatricDentistryReview ;
+                                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_PulseOximetry
+:SCD_FollowUp_PulseOximetry rdf:type owl:NamedIndividual ,
+                                     :FollowUp ;
+                            :hasFollowUpCost :SCD_Cost_FollowUp_PulseOximetry ;
+                            :hasFollowUpGuidelines :SCD_Guidelines_FwUp_PulseOximetry ;
+                            :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_RXChest
+:SCD_FollowUp_RXChest rdf:type owl:NamedIndividual ,
+                               :FollowUp ;
+                      :hasFollowUpCost :SCD_Cost_FollowUp_RXChest ;
+                      :hasFollowUpGuidelines :SCD_Guidelines_FwUp_RXChest ;
+                      :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_ReticulocyteCount
+:SCD_FollowUp_ReticulocyteCount rdf:type owl:NamedIndividual ,
+                                         :FollowUp ;
+                                :hasFollowUpCost :SCD_Cost_FollowUp_ReticulocyteCount ;
+                                :hasFollowUpGuidelines :SCD_Guidelines_FwUp_ReticulocyteCount ;
+                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_FollowUp_TranscranialEchoDoppler
+:SCD_FollowUp_TranscranialEchoDoppler rdf:type owl:NamedIndividual ,
+                                               :FollowUp ;
+                                      :hasFollowUpCost :SCD_Cost_FollowUp_TranscranialEchoDoppler ;
+                                      :hasFollowUpGuidelines :SCD_Guidelines_FwUp_TranscranialEchoDoppler ;
+                                      :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_CefotaximaIV
+:SCD_Guidelines_Drug_CefotaximaIV rdf:type owl:NamedIndividual ,
+                                           :Guidelines ;
+                                  :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                  :hasDescription "FILL-ME" ;
+                                  :hasDose "300mg/KG" ;
+                                  :hasFrequency "1d" ;
+                                  :hasHoursInterval "6.0"^^xsd:double ;
+                                  :hasRange "@15d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Penicillin_Initial
+:SCD_Guidelines_Drug_Penicillin_Initial rdf:type owl:NamedIndividual ,
+                                                 :Guidelines ;
+                                        :hasConditions "disease == true" ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasDose "125mg" ;
+                                        :hasFrequency "1d" ;
+                                        :hasHoursInterval "12.0"^^xsd:double ;
+                                        :hasRange "3m-3y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Penicillin_Wless25
+:SCD_Guidelines_Drug_Penicillin_Wless25 rdf:type owl:NamedIndividual ,
+                                                 :Guidelines ;
+                                        :hasConditions "disease == true && weight <= 25" ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasDose "250mg" ;
+                                        :hasFrequency "1d" ;
+                                        :hasHoursInterval "12.0"^^xsd:double ;
+                                        :hasRange "3y-5y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Penicillin_Wless25_Splenectomy
+:SCD_Guidelines_Drug_Penicillin_Wless25_Splenectomy rdf:type owl:NamedIndividual ,
+                                                             :Guidelines ;
+                                                    :hasConditions "weight <= 25 && splenectomy == true && disease == true" ;
+                                                    :hasDescription "FILL-ME" ;
+                                                    :hasDose "250mg" ;
+                                                    :hasFrequency "1d" ;
+                                                    :hasHoursInterval "12.0"^^xsd:double ;
+                                                    :hasRange "5y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Penicillin_Wmore25
+:SCD_Guidelines_Drug_Penicillin_Wmore25 rdf:type owl:NamedIndividual ,
+                                                 :Guidelines ;
+                                        :hasConditions "disease == true && weight > 25" ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasDose "400mg" ;
+                                        :hasFrequency "1d" ;
+                                        :hasHoursInterval "12.0"^^xsd:double ;
+                                        :hasRange "3y-5y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Penicillin_Wmore25_Splenectomy
+:SCD_Guidelines_Drug_Penicillin_Wmore25_Splenectomy rdf:type owl:NamedIndividual ,
+                                                             :Guidelines ;
+                                                    :hasConditions "weight > 25 && splenectomy == true && disease == true" ;
+                                                    :hasDescription "FILL-ME" ;
+                                                    :hasDose "400mg" ;
+                                                    :hasFrequency "1d" ;
+                                                    :hasHoursInterval "12.0"^^xsd:double ;
+                                                    :hasRange "5y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Pneumo23
+:SCD_Guidelines_Drug_Pneumo23 rdf:type owl:NamedIndividual ,
+                                       :Guidelines ;
+                              :hasDescription "FILL-ME" ;
+                              :hasDose "1u" ;
+                              :hasFrequency "1u" ;
+                              :hasRange "&2y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_Prevenar13
+:SCD_Guidelines_Drug_Prevenar13 rdf:type owl:NamedIndividual ,
+                                         :Guidelines ;
+                                :hasDescription "FILL-ME" ;
+                                :hasDose "1u" ;
+                                :hasFrequency "6m" ;
+                                :hasRange "0y-2y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Drug_VancomicinaIV
+:SCD_Guidelines_Drug_VancomicinaIV rdf:type owl:NamedIndividual ,
+                                            :Guidelines ;
+                                   :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                   :hasDescription "FILL-ME" ;
+                                   :hasDose "60mg/KG" ;
+                                   :hasFrequency "1d" ;
+                                   :hasHoursInterval "6.0"^^xsd:double ;
+                                   :hasRange "@15d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_AbdominalEcho
+:SCD_Guidelines_FwUp_AbdominalEcho rdf:type owl:NamedIndividual ,
+                                            :Guidelines ;
+                                   :hasDescription "FILL-ME" ;
+                                   :hasFrequency "3y" ;
+                                   :hasRange "6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_Audiometry
+:SCD_Guidelines_FwUp_Audiometry rdf:type owl:NamedIndividual ,
+                                         :Guidelines ;
+                                :hasDescription "FILL-ME" ;
+                                :hasFrequency "2y" ;
+                                :hasRange "4y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_BasicUrineProfile
+:SCD_Guidelines_FwUp_BasicUrineProfile rdf:type owl:NamedIndividual ,
+                                                :Guidelines ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasFrequency "1y" ;
+                                       :hasRange "0y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_CardiologicalEvaluation
+:SCD_Guidelines_FwUp_CardiologicalEvaluation rdf:type owl:NamedIndividual ,
+                                                      :Guidelines ;
+                                             :hasDescription "FILL-ME" ;
+                                             :hasFrequency "2y" ;
+                                             :hasRange "8y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_CreatinineClearance
+:SCD_Guidelines_FwUp_CreatinineClearance rdf:type owl:NamedIndividual ,
+                                                  :Guidelines ;
+                                         :hasDescription "FILL-ME" ;
+                                         :hasFrequency "1y" ;
+                                         :hasRange "12y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_Ferritin
+:SCD_Guidelines_FwUp_Ferritin rdf:type owl:NamedIndividual ,
+                                       :Guidelines ;
+                              :hasDescription "FILL-ME" ;
+                              :hasFrequency "1y" ;
+                              :hasRange "2y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_FollowUpInNeurology
+:SCD_Guidelines_FwUp_FollowUpInNeurology rdf:type owl:NamedIndividual ,
+                                                  :Guidelines ;
+                                         :hasDescription "FILL-ME" ;
+                                         :hasFrequency "2y" ;
+                                         :hasRange "2y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_FollowUpInOphthalmology_A
+:SCD_Guidelines_FwUp_FollowUpInOphthalmology_A rdf:type owl:NamedIndividual ,
+                                                        :Guidelines ;
+                                               :hasDescription "FILL-ME" ;
+                                               :hasRange "&8y,&10y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_FollowUpInOphthalmology_B
+:SCD_Guidelines_FwUp_FollowUpInOphthalmology_B rdf:type owl:NamedIndividual ,
+                                                        :Guidelines ;
+                                               :hasDescription "FILL-ME" ;
+                                               :hasFrequency "1y" ;
+                                               :hasRange "12y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_Hb_S
+:SCD_Guidelines_FwUp_Hb_S rdf:type owl:NamedIndividual ,
+                                   :Guidelines ;
+                          :hasDescription "FILL-ME" ;
+                          :hasRange "&5y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_HealthEducationByNursing
+:SCD_Guidelines_FwUp_HealthEducationByNursing rdf:type owl:NamedIndividual ,
+                                                       :Guidelines ;
+                                              :hasDescription "FILL-ME" ;
+                                              :hasFrequency "3m,6m,1y" ;
+                                              :hasRange "0y-1y,1y-5y,6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_HemoglobinF
+:SCD_Guidelines_FwUp_HemoglobinF rdf:type owl:NamedIndividual ,
+                                          :Guidelines ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasFrequency "1y" ;
+                                 :hasRange "0y-2y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_Hemogram_Biochemistry
+:SCD_Guidelines_FwUp_Hemogram_Biochemistry rdf:type owl:NamedIndividual ,
+                                                    :Guidelines ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasFrequency "3m,6m,1y" ;
+                                           :hasRange "0y-1y,1y-5y,6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_MagneticResonance
+:SCD_Guidelines_FwUp_MagneticResonance rdf:type owl:NamedIndividual ,
+                                                :Guidelines ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasFrequency "2y" ;
+                                       :hasRange "4y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_MicroAlbuminInUrine
+:SCD_Guidelines_FwUp_MicroAlbuminInUrine rdf:type owl:NamedIndividual ,
+                                                  :Guidelines ;
+                                         :hasDescription "FILL-ME" ;
+                                         :hasFrequency "1y" ;
+                                         :hasRange "6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_PediatricConsultation
+:SCD_Guidelines_FwUp_PediatricConsultation rdf:type owl:NamedIndividual ,
+                                                    :Guidelines ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasFrequency "3m,6m,1y" ;
+                                           :hasRange "0y-1y,1y-5y,6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_PediatricDentistryReview
+:SCD_Guidelines_FwUp_PediatricDentistryReview rdf:type owl:NamedIndividual ,
+                                                       :Guidelines ;
+                                              :hasDescription "FILL-ME" ;
+                                              :hasFrequency "2y" ;
+                                              :hasRange "5y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_PulseOximetry
+:SCD_Guidelines_FwUp_PulseOximetry rdf:type owl:NamedIndividual ,
+                                            :Guidelines ;
+                                   :hasDescription "FILL-ME" ;
+                                   :hasFrequency "2y" ;
+                                   :hasRange "4y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_RXChest
+:SCD_Guidelines_FwUp_RXChest rdf:type owl:NamedIndividual ,
+                                      :Guidelines ;
+                             :hasDescription "FILL-ME" ;
+                             :hasFrequency "2y" ;
+                             :hasRange "2y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_ReticulocyteCount
+:SCD_Guidelines_FwUp_ReticulocyteCount rdf:type owl:NamedIndividual ,
+                                                :Guidelines ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasFrequency "3m,6m,1y" ;
+                                       :hasRange "0y-1y,1y-5y,6y-*" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_FwUp_TranscranialEchoDoppler
+:SCD_Guidelines_FwUp_TranscranialEchoDoppler rdf:type owl:NamedIndividual ,
+                                                      :Guidelines ;
+                                             :hasDescription "FILL-ME" ;
+                                             :hasFrequency "1y" ;
+                                             :hasRange "2y-16y" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_CTScanner_Manif_Stroke
+:SCD_Guidelines_Treatment_CTScanner_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                          :Guidelines ;
+                                                 :hasUtility :SCD_Utility_Disease_Severe ;
+                                                 :hasDescription "FILL-ME" ;
+                                                 :hasRange "@1d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_ExchangeTransfusion
+:SCD_Guidelines_Treatment_ExchangeTransfusion rdf:type owl:NamedIndividual ,
+                                                       :Guidelines ;
+                                              :hasUtility :SCD_Disutility_Treatment_Transfusion ,
+                                                          :SCD_Utility_Disease_Severe ;
+                                              :hasDescription "FILL-ME" ;
+                                              :hasRange "@1d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_HospitalStay_Manif_PneumococcalSepsis
+:SCD_Guidelines_Treatment_HospitalStay_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                                         :Guidelines ;
+                                                                :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                                                :hasDescription "FILL-ME" ;
+                                                                :hasRange "@8d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_HospitalStay_Manif_SplenicSequestration
+:SCD_Guidelines_Treatment_HospitalStay_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                           :Guidelines ;
+                                                                  :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                                                  :hasDescription "FILL-ME" ;
+                                                                  :hasRange "@6d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_HospitalStay_Manif_Stroke
+:SCD_Guidelines_Treatment_HospitalStay_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                             :Guidelines ;
+                                                    :hasUtility :SCD_Utility_Disease_Severe ;
+                                                    :hasDescription "FILL-ME" ;
+                                                    :hasRange "@16d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_SimpleTransfusion
+:SCD_Guidelines_Treatment_SimpleTransfusion rdf:type owl:NamedIndividual ,
+                                                     :Guidelines ;
+                                            :hasUtility :SCD_Disutility_Treatment_Transfusion ,
+                                                        :SCD_Utility_Disease_NoSevere ;
+                                            :hasDescription "FILL-ME" ;
+                                            :hasRange "@1d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_Splenectomy_Manif_SplenicSequestration
+:SCD_Guidelines_Treatment_Splenectomy_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                          :Guidelines ;
+                                                                 :hasUtility :SCD_Utility_Disease_Severe ;
+                                                                 :hasDescription "FILL-ME" ;
+                                                                 :hasRange "@1d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_UciStay_Manif_PneumococcalSepsis
+:SCD_Guidelines_Treatment_UciStay_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                                    :Guidelines ;
+                                                           :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                                           :hasDescription "FILL-ME" ;
+                                                           :hasRange "@3d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_UciStay_Manif_SplenicSequestration
+:SCD_Guidelines_Treatment_UciStay_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                      :Guidelines ;
+                                                             :hasUtility :SCD_Utility_Disease_NoSevere ;
+                                                             :hasDescription "FILL-ME" ;
+                                                             :hasRange "@1d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Guidelines_Treatment_UciStay_Manif_Stroke
+:SCD_Guidelines_Treatment_UciStay_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                        :Guidelines ;
+                                               :hasUtility :SCD_Utility_Disease_Severe ;
+                                               :hasDescription "FILL-ME" ;
+                                               :hasRange "@2d" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Intervention_NoScreening
+:SCD_Intervention_NoScreening rdf:type owl:NamedIndividual ,
+                                       :Intervention ;
+                              :hasInterventionClinicalDiagnosisStrategy :SCD_Strategy_ClinicalDiagnosis ;
+                              :hasDescription "FILL-ME" ;
+                              :hasKindIntervention "NO_SCREENING" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Intervention_Screening
+:SCD_Intervention_Screening rdf:type owl:NamedIndividual ,
+                                     :Intervention ;
+                            :hasInterventionClinicalDiagnosisStrategy :SCD_Strategy_ClinicalDiagnosis ;
+                            :hasInterventionScreeningStrategy :SCD_Strategy_Screening ;
+                            :hasManifestationModification :SCD_ManMod_IntScr_SplenicSequestration ;
+                            :hasDescription "FILL-ME" ;
+                            :hasKindIntervention "SCREENING" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_ManMod_IntScr_SplenicSequestration
+:SCD_ManMod_IntScr_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                 :ManifestationModification ;
+                                        :hasManifestations :SCD_Manif_SplenicSequestration ;
+                                        :hasDescription "FILL-ME" ;
+                                        :hasMortalityFactorModification "0.053"^^xsd:double .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Anemia
+:SCD_Manif_Anemia rdf:type owl:NamedIndividual ,
+                           :Manifestation ;
+                  :hasDescription "FILL-ME" ;
+                  :hasProbability """<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\" />
+		<rdt:headerDefinition text=\"Anemia\" uid=\"005\" />
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"005\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">3,95</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">1,7</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">3,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">5,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">3,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">8,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">1,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">1</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">10-100</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_ChestSyndrome
+:SCD_Manif_ChestSyndrome rdf:type owl:NamedIndividual ,
+                                  :Manifestation ;
+                         :hasDescription "FILL-ME" ;
+                         :hasProbability """<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\" />
+		<rdt:headerDefinition text=\"Chest Syndrome\" uid=\"006\" />
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"006\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">11,6</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">26,8</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">26,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">34,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">25,5</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">22,5</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">28,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">20,8</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">15,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">9,27</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">10-100</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_HearingLoss
+:SCD_Manif_HearingLoss rdf:type owl:NamedIndividual ,
+                                :Manifestation ;
+                       :hasPrecedingManifestations :SCD_PrecManif_HearingLoss ;
+                       :hasUtility :SCD_Disutility_Manif_HearingLoss ;
+                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Meningitis
+:SCD_Manif_Meningitis rdf:type owl:NamedIndividual ,
+                               :Manifestation ;
+                      :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_Meningitis ;
+                      :hasPrecedingManifestations :SCD_PrecManif_Meningitis ;
+                      :hasDescription "FILL-ME" ;
+                      :hasKindManifestation "ACUTE" ;
+                      :hasMortalityFactor "0.31"^^xsd:double .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_MentalRetardation
+:SCD_Manif_MentalRetardation rdf:type owl:NamedIndividual ,
+                                      :Manifestation ;
+                             :hasPrecedingManifestations :SCD_PrecManif_MentalRetardation ;
+                             :hasUtility :SCD_Disutility_Manif_MentalRetardation ;
+                             :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_PneumococcalSepsis
+:SCD_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                       :Manifestation ;
+                              :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_PneumococcalSepsis ;
+                              :hasDescription "FILL-ME" ;
+                              :hasKindManifestation "ACUTE" ;
+                              :hasMortalityFactor "0.1528#BETA(11,61)" ;
+                              :hasProbability """<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:requiredVariables>
+		<rdt:variable uid= \"v001\" name=\"PROPHYLAXIS\"/>
+	</rdt:requiredVariables>
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\"/>
+		<rdt:headerDefinition text=\"Sepsis por neumococos\" uid=\"002\">
+			<rdt:headerDefinition text=\"Sin profilaxis\" uid=\"012\" />
+			<rdt:headerDefinition text=\"En profilaxis\" uid=\"022\" varRef=\"v001\" />
+		</rdt:headerDefinition>
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"012\" />
+		<rdt:headerReference uidRef=\"022\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">9</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">9</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">9</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">9</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">9</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">7,2</rdt:column>
+			<rdt:column type=\"NUMBER\">1,6</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">5,4</rdt:column>
+			<rdt:column type=\"NUMBER\">1,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">3,6</rdt:column>
+			<rdt:column type=\"NUMBER\">0,8</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">1,8</rdt:column>
+			<rdt:column type=\"NUMBER\">0,4</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">10-100</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Seizure
+:SCD_Manif_Seizure rdf:type owl:NamedIndividual ,
+                            :Manifestation ;
+                   :hasPrecedingManifestations :SCD_PrecManif_Seizure ;
+                   :hasDescription "FILL-ME" ;
+                   :hasKindManifestation "CHRONIC" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_SplenicSequestration
+:SCD_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                         :Manifestation ;
+                                :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_SplenicSequestration ;
+                                :hasDescription "FILL-ME" ;
+                                :hasKindManifestation "ACUTE" ;
+                                :hasMortalityFactor "0.06#BETA(6,94)" ;
+                                :hasProbability """<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:requiredVariables>
+		<rdt:variable uid= \"v001\" name=\"PARENTAL_EDUCATION\"/>
+	</rdt:requiredVariables>
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\" />
+		<rdt:headerDefinition text=\"Secuestro esplénico\" uid=\"003\">
+			<rdt:headerDefinition text=\"Sin educación parental\" uid=\"013\" />
+			<rdt:headerDefinition text=\"Con educación parental\" uid=\"023\" varRef=\"v001\" />
+		</rdt:headerDefinition>
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"013\" />
+		<rdt:headerReference uidRef=\"023\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">3,25</rdt:column>
+			<rdt:column type=\"NUMBER\">6,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">6,2</rdt:column>
+			<rdt:column type=\"NUMBER\">6,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">5,3</rdt:column>
+			<rdt:column type=\"NUMBER\">6,3</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">2</rdt:column>
+			<rdt:column type=\"NUMBER\">1,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">1,5</rdt:column>
+			<rdt:column type=\"NUMBER\">1,9</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">1,4</rdt:column>
+			<rdt:column type=\"NUMBER\">1,4</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">1</rdt:column>
+			<rdt:column type=\"NUMBER\">1,4</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">0,5</rdt:column>
+			<rdt:column type=\"NUMBER\">0,6</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+			<rdt:column type=\"NUMBER\">0,6</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+			<rdt:column type=\"NUMBER\">0,7</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">10-100</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_SplenicSequestration_Recurrent
+:SCD_Manif_SplenicSequestration_Recurrent rdf:type owl:NamedIndividual ,
+                                                   :Manifestation ;
+                                          :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_SplenicSequestration ;
+                                          :hasPrecedingManifestations :SCD_PrecManif_SplenicSequestration_Recurrent ;
+                                          :hasDescription "FILL-ME" ;
+                                          :hasKindManifestation "CHRONIC" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Stroke
+:SCD_Manif_Stroke rdf:type owl:NamedIndividual ,
+                           :Manifestation ;
+                  :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_Stroke ;
+                  :hasDescription "FILL-ME" ;
+                  :hasKindManifestation "ACUTE" ;
+                  :hasMortalityFactor "0.27#GAMMA(107,1)" ;
+                  :hasProbability """<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\" />
+		<rdt:headerDefinition text=\"Ictus\" uid=\"004\">
+			<rdt:headerDefinition text=\"Primer ictus sin prevención\" uid=\"014\" />
+		</rdt:headerDefinition>
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"014\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">0,24</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">1,67</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">1,67</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">1,08</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">1,08</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">1,31</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">1,31</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">0,27</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">0,27</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">10-100</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Stroke_Dependence
+:SCD_Manif_Stroke_Dependence rdf:type owl:NamedIndividual ,
+                                      :Manifestation ;
+                             :hasPrecedingManifestations :SCD_PrecManif_Stroke_Dependence ;
+                             :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Stroke_Dependence_Recurrent
+:SCD_Manif_Stroke_Dependence_Recurrent rdf:type owl:NamedIndividual ,
+                                                :Manifestation ;
+                                       :hasPrecedingManifestations :SCD_PrecManif_Stroke_Dependence_Recurrent ;
+                                       :hasDescription "FILL-ME" ;
+                                       :hasKindManifestation "CHRONIC" ;
+                                       :hasMortalityFactor "GAMMA(39,1)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Manif_Stroke_Recurrent
+:SCD_Manif_Stroke_Recurrent rdf:type owl:NamedIndividual ,
+                                     :Manifestation ;
+                            :hasManifestationTreatmentStrategy :SCD_TreatmentStrategy_Manif_Stroke ;
+                            :hasPrecedingManifestations :SCD_PrecManif_Stroke_Recurrent ;
+                            :hasDescription "FILL-ME" ;
+                            :hasKindManifestation "CHRONIC" ;
+                            :hasMortalityFactor "0.29"^^xsd:double .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_HearingLoss
+:SCD_PrecManif_HearingLoss rdf:type owl:NamedIndividual ,
+                                    :PrecedingManifestations ;
+                           :hasPrecedingManifestation :SCD_Manif_Meningitis ;
+                           :hasDescription "FILL-ME" ;
+                           :hasProbability 0.138 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_Meningitis
+:SCD_PrecManif_Meningitis rdf:type owl:NamedIndividual ,
+                                   :PrecedingManifestations ;
+                          :hasPrecedingManifestation :SCD_Manif_PneumococcalSepsis ;
+                          :hasDescription "FILL-ME" ;
+                          :hasProbability "0.1803#BETA(11,50)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_MentalRetardation
+:SCD_PrecManif_MentalRetardation rdf:type owl:NamedIndividual ,
+                                          :PrecedingManifestations ;
+                                 :hasPrecedingManifestation :SCD_Manif_Meningitis ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasProbability 0.0345 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_Seizure
+:SCD_PrecManif_Seizure rdf:type owl:NamedIndividual ,
+                                :PrecedingManifestations ;
+                       :hasPrecedingManifestation :SCD_Manif_Meningitis ;
+                       :hasDescription "FILL-ME" ;
+                       :hasProbability 0.0552 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_SplenicSequestration_Recurrent
+:SCD_PrecManif_SplenicSequestration_Recurrent rdf:type owl:NamedIndividual ,
+                                                       :PrecedingManifestations ;
+                                              :hasPrecedingManifestation :SCD_Manif_SplenicSequestration ;
+                                              :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_Stroke_Dependence
+:SCD_PrecManif_Stroke_Dependence rdf:type owl:NamedIndividual ,
+                                          :PrecedingManifestations ;
+                                 :hasPrecedingManifestation :SCD_Manif_Stroke ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasProbability "0.27#GAMMA(106,1)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_Stroke_Dependence_Recurrent
+:SCD_PrecManif_Stroke_Dependence_Recurrent rdf:type owl:NamedIndividual ,
+                                                    :PrecedingManifestations ;
+                                           :hasPrecedingManifestation :SCD_Manif_Stroke_Recurrent ;
+                                           :hasDescription "FILL-ME" ;
+                                           :hasProbability "0.37#GAMMA(49,1)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_PrecManif_Stroke_Recurrent
+:SCD_PrecManif_Stroke_Recurrent rdf:type owl:NamedIndividual ,
+                                         :PrecedingManifestations ;
+                                :hasPrecedingManifestation :SCD_Manif_Stroke ;
+                                :hasDescription "FILL-ME" ;
+                                :hasProbability """<rdt:datatable xmlns:rdt=\"http://www.ull.es/RaDiOS/datatypes\"
+	xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+	xsi:schemaLocation=\"http://www.ull.es/RaDiOS/datatypes datatable.xsd \">
+
+	<rdt:description>Tasas de complicaciones por 100 pacientes-año</rdt:description>
+	<rdt:informationKind>RATE</rdt:informationKind>
+	<rdt:population>100</rdt:population>
+	<rdt:period value=\"1\" kind=\"YEAR\" />
+
+	<rdt:headers>
+		<rdt:headerDefinition text=\"Edad\" uid=\"001\" index=\"AGE\" />
+		<rdt:headerDefinition text=\"Ictus\" uid=\"004\">
+			<rdt:headerDefinition text=\"Recurrencia en régimen transfusinal\" uid=\"024\" />
+		</rdt:headerDefinition>
+	</rdt:headers>
+
+	<rdt:colHeaders>
+		<rdt:headerReference uidRef=\"001\" />
+		<rdt:headerReference uidRef=\"024\" />
+	</rdt:colHeaders>
+
+	<rdt:content>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">0-1</rdt:column>
+			<rdt:column type=\"NUMBER\">0</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">1-2</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">2-3</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">3-4</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">4-5</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">5-6</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">6-7</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">7-8</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">8-9</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+		<rdt:row>
+			<rdt:column type=\"RANGE\">9-10</rdt:column>
+			<rdt:column type=\"NUMBER\">3,2</rdt:column>
+		</rdt:row>
+	</rdt:content>
+</rdt:datatable>""" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_References
+:SCD_References rdf:type owl:NamedIndividual ,
+                         :References ;
+                :hasDescription "FILL-ME" ;
+                :hasRefToGARD "https://rarediseases.info.nih.gov/diseases/8614/disease" ;
+                :hasRefToOMIM "https://omim.org/entry/603903" ;
+                :hasRefToORDO "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=EN&Expert=232" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Screening_Technique
+:SCD_Screening_Technique rdf:type owl:NamedIndividual ,
+                                  :Screening ;
+                         :hasScreeningCost :SCD_Cost_Screening_Technique ;
+                         :hasDescription "FILL-ME" ;
+                         :hasSensitivity "1.0"^^xsd:double ;
+                         :hasSpecificity "1.0"^^xsd:double .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_StepStrategy_FollowUp_Unique
+:SCD_StepStrategy_FollowUp_Unique rdf:type owl:NamedIndividual ,
+                                           :FollowUpStepStrategy ;
+                                  :hasFollowUp :SCD_FollowUp_AbdominalEcho ,
+                                               :SCD_FollowUp_Audiometry ,
+                                               :SCD_FollowUp_BasicUrineProfile ,
+                                               :SCD_FollowUp_CardiologicalEvaluation ,
+                                               :SCD_FollowUp_CreatinineClearance ,
+                                               :SCD_FollowUp_Ferritin ,
+                                               :SCD_FollowUp_FollowUpInNeurology ,
+                                               :SCD_FollowUp_FollowUpInOphthalmology ,
+                                               :SCD_FollowUp_Hb_S ,
+                                               :SCD_FollowUp_HealthEducationByNursing ,
+                                               :SCD_FollowUp_HemoglobinF ,
+                                               :SCD_FollowUp_Hemogram_Biochemistry ,
+                                               :SCD_FollowUp_MagneticResonance ,
+                                               :SCD_FollowUp_MicroAlbuminInUrine ,
+                                               :SCD_FollowUp_PediatricConsultation ,
+                                               :SCD_FollowUp_PediatricDentistryReview ,
+                                               :SCD_FollowUp_PulseOximetry ,
+                                               :SCD_FollowUp_RXChest ,
+                                               :SCD_FollowUp_ReticulocyteCount ,
+                                               :SCD_FollowUp_TranscranialEchoDoppler ;
+                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_StepStrategy_Screening_First
+:SCD_StepStrategy_Screening_First rdf:type owl:NamedIndividual ,
+                                           :ScreeningStepStrategy ;
+                                  :hasScreening :SCD_Screening_Technique ;
+                                  :hasDescription "FILL-ME" ;
+                                  :hasOrderStep "1"^^xsd:short ;
+                                  :hasPercentForTheNext "0.27#BETA(0.0027;0.0024)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_StepStrategy_Screening_Second
+:SCD_StepStrategy_Screening_Second rdf:type owl:NamedIndividual ,
+                                            :ScreeningStepStrategy ;
+                                   :hasScreening :SCD_Screening_Technique ;
+                                   :hasDescription "FILL-ME" ;
+                                   :hasOrderStep "2"^^xsd:short ;
+                                   :hasPercentForTheNext "0.0"^^xsd:double .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_StepStrategy_Treatment_Unique
+:SCD_StepStrategy_Treatment_Unique rdf:type owl:NamedIndividual ,
+                                            :TreatmentStepStrategy ;
+                                   :hasTreatment :SCD_TreatmentStrategy_Manif_Meningitis ,
+                                                 :SCD_TreatmentStrategy_Manif_PneumococcalSepsis ,
+                                                 :SCD_TreatmentStrategy_Manif_SplenicSequestration ,
+                                                 :SCD_TreatmentStrategy_Manif_SplenicSequestrationRecurrent ,
+                                                 :SCD_TreatmentStrategy_Manif_Stroke ;
+                                   :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Strategy_ClinicalDiagnosis
+:SCD_Strategy_ClinicalDiagnosis rdf:type owl:NamedIndividual ,
+                                         :ClinicalDiagnosisStrategy ;
+                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Strategy_FollowUp
+:SCD_Strategy_FollowUp rdf:type owl:NamedIndividual ,
+                                :FollowUpStrategy ;
+                       :hasFollowUpStepsStrategy :SCD_StepStrategy_FollowUp_Unique ;
+                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Strategy_Screening
+:SCD_Strategy_Screening rdf:type owl:NamedIndividual ,
+                                 :ScreeningStrategy ;
+                        :hasScreeningStepsStrategy :SCD_StepStrategy_Screening_First ,
+                                                   :SCD_StepStrategy_Screening_Second ;
+                        :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Strategy_Treatment
+:SCD_Strategy_Treatment rdf:type owl:NamedIndividual ,
+                                 :TreatmentStrategy ;
+                        :hasTreatmentStepsStrategy :SCD_StepStrategy_Treatment_Unique ;
+                        :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Strategy_Treatment_General
+:SCD_Strategy_Treatment_General rdf:type owl:NamedIndividual ,
+                                         :TreatmentStrategy ;
+                                :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_General ;
+                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_1_Manif_Meningitis
+:SCD_TreatmentStepStrategy_1_Manif_Meningitis rdf:type owl:NamedIndividual ,
+                                                       :TreatmentStepStrategy ;
+                                              :hasTreatment :SCD_Treatment_DrugsForMeningitis ;
+                                              :hasDescription "FILL-ME" ;
+                                              :hasOrderStep 1 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_1_Manif_PneumococcalSepsis
+:SCD_TreatmentStepStrategy_1_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                               :TreatmentStepStrategy ;
+                                                      :hasTreatment :SCD_Treatment_UciStay_Manif_PneumococcalSepsis ;
+                                                      :hasDescription "FILL-ME" ;
+                                                      :hasOrderStep 1 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_1_Manif_SplenicSequestration
+:SCD_TreatmentStepStrategy_1_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                 :TreatmentStepStrategy ;
+                                                        :hasTreatment :SCD_Treatment_HospitalStay_Manif_SplenicSequestration ,
+                                                                      :SCD_Treatment_SimpleTransfusion ,
+                                                                      :SCD_Treatment_UciStay_Manif_SplenicSequestration ;
+                                                        :hasDescription "FILL-ME" ;
+                                                        :hasOrderStep 1 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_1_Manif_Stroke
+:SCD_TreatmentStepStrategy_1_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                   :TreatmentStepStrategy ;
+                                          :hasTreatment :SCD_Treatment_UciStay_Manif_Stroke ;
+                                          :hasDescription "FILL-ME" ;
+                                          :hasOrderStep 1 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_2_Manif_PneumococcalSepsis
+:SCD_TreatmentStepStrategy_2_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                               :TreatmentStepStrategy ;
+                                                      :hasTreatment :SCD_Treatment_HospitalStay_Manif_PneumococcalSepsis ;
+                                                      :hasDescription "FILL-ME" ;
+                                                      :hasOrderStep 2 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_2_Manif_SplenicSequestration
+:SCD_TreatmentStepStrategy_2_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                 :TreatmentStepStrategy ;
+                                                        :hasTreatment :SCD_Treatment_Splenectomy_Manif_SplenicSequestration ;
+                                                        :hasDescription "FILL-ME" ;
+                                                        :hasOrderStep 2 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_2_Manif_SplenicSequestrationRecurrent
+:SCD_TreatmentStepStrategy_2_Manif_SplenicSequestrationRecurrent rdf:type owl:NamedIndividual ,
+                                                                          :TreatmentStepStrategy ;
+                                                                 :hasTreatment :SCD_Treatment_Splenectomy_Manif_SplenicSequestrationRecurrent ;
+                                                                 :hasDescription "FILL-ME" ;
+                                                                 :hasOrderStep 2 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_2_Manif_Stroke
+:SCD_TreatmentStepStrategy_2_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                   :TreatmentStepStrategy ;
+                                          :hasTreatment :SCD_Treatment_HospitalStay_Manif_Stroke ;
+                                          :hasDescription "FILL-ME" ;
+                                          :hasOrderStep 2 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_3_Manif_Stroke
+:SCD_TreatmentStepStrategy_3_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                   :TreatmentStepStrategy ;
+                                          :hasTreatment :SCD_Treatment_CTScanner ,
+                                                        :SCD_Treatment_ExchangeTransfusion ;
+                                          :hasDescription "FILL-ME" ;
+                                          :hasOrderStep 3 .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStepStrategy_General
+:SCD_TreatmentStepStrategy_General rdf:type owl:NamedIndividual ,
+                                            :TreatmentStepStrategy ;
+                                   :hasTreatment :SCD_Treatment_General ;
+                                   :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStrategy_Manif_Meningitis
+:SCD_TreatmentStrategy_Manif_Meningitis rdf:type owl:NamedIndividual ,
+                                                 :TreatmentStrategy ;
+                                        :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_1_Manif_Meningitis ;
+                                        :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStrategy_Manif_PneumococcalSepsis
+:SCD_TreatmentStrategy_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                         :TreatmentStrategy ;
+                                                :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_1_Manif_PneumococcalSepsis ,
+                                                                           :SCD_TreatmentStepStrategy_2_Manif_PneumococcalSepsis ;
+                                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStrategy_Manif_SplenicSequestration
+:SCD_TreatmentStrategy_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                           :TreatmentStrategy ;
+                                                  :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_1_Manif_SplenicSequestration ,
+                                                                             :SCD_TreatmentStepStrategy_2_Manif_SplenicSequestration ;
+                                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStrategy_Manif_SplenicSequestrationRecurrent
+:SCD_TreatmentStrategy_Manif_SplenicSequestrationRecurrent rdf:type owl:NamedIndividual ,
+                                                                    :TreatmentStrategy ;
+                                                           :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_1_Manif_SplenicSequestration ,
+                                                                                      :SCD_TreatmentStepStrategy_2_Manif_SplenicSequestrationRecurrent ;
+                                                           :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_TreatmentStrategy_Manif_Stroke
+:SCD_TreatmentStrategy_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                             :TreatmentStrategy ;
+                                    :hasTreatmentStepsStrategy :SCD_TreatmentStepStrategy_1_Manif_Stroke ,
+                                                               :SCD_TreatmentStepStrategy_2_Manif_Stroke ,
+                                                               :SCD_TreatmentStepStrategy_3_Manif_Stroke ;
+                                    :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_CTScanner
+:SCD_Treatment_CTScanner rdf:type owl:NamedIndividual ,
+                                  :Treatment ;
+                         :hasTreatmentCost :SCD_Cost_Treatment_CTScanner ;
+                         :hasTreatmentGuidelines :SCD_Guidelines_Treatment_CTScanner_Manif_Stroke ;
+                         :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_DrugsForMeningitis
+:SCD_Treatment_DrugsForMeningitis rdf:type owl:NamedIndividual ,
+                                           :Treatment ;
+                                  :hasDrugs :SCD_Drug_CefotaximaIV ,
+                                            :SCD_Drug_VancomicinaIV ;
+                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_ExchangeTransfusion
+:SCD_Treatment_ExchangeTransfusion rdf:type owl:NamedIndividual ,
+                                            :Treatment ;
+                                   :hasTreatmentCost :SCD_Cost_Treatment_ExchangeTransfusion ;
+                                   :hasTreatmentGuidelines :SCD_Guidelines_Treatment_ExchangeTransfusion ;
+                                   :hasDescription "FILL-ME" ;
+                                   :hasPercentageTreated "0.8#BETA(40,10)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_General
+:SCD_Treatment_General rdf:type owl:NamedIndividual ,
+                                :Treatment ;
+                       :hasDrugs :SCD_Drug_Penicillin ,
+                                 :SCD_Drug_Pneumo23 ,
+                                 :SCD_Drug_Prevenar13 ;
+                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_HospitalStay_Manif_PneumococcalSepsis
+:SCD_Treatment_HospitalStay_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                              :Treatment ;
+                                                     :hasTreatmentCost :SCD_Cost_Treatment_HospitalStay ;
+                                                     :hasTreatmentGuidelines :SCD_Guidelines_Treatment_HospitalStay_Manif_PneumococcalSepsis ;
+                                                     :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_HospitalStay_Manif_SplenicSequestration
+:SCD_Treatment_HospitalStay_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                                :Treatment ;
+                                                       :hasTreatmentCost :SCD_Cost_Treatment_HospitalStay ;
+                                                       :hasTreatmentGuidelines :SCD_Guidelines_Treatment_HospitalStay_Manif_SplenicSequestration ;
+                                                       :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_HospitalStay_Manif_Stroke
+:SCD_Treatment_HospitalStay_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                                  :Treatment ;
+                                         :hasTreatmentCost :SCD_Cost_Treatment_HospitalStay ;
+                                         :hasTreatmentGuidelines :SCD_Guidelines_Treatment_HospitalStay_Manif_Stroke ;
+                                         :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_SimpleTransfusion
+:SCD_Treatment_SimpleTransfusion rdf:type owl:NamedIndividual ,
+                                          :Treatment ;
+                                 :hasTreatmentCost :SCD_Cost_Treatment_SimpleTransfusion ;
+                                 :hasTreatmentGuidelines :SCD_Guidelines_Treatment_SimpleTransfusion ;
+                                 :hasDescription "FILL-ME" ;
+                                 :hasPercentageTreated "0.8#BETA(40,10)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_Splenectomy_Manif_SplenicSequestration
+:SCD_Treatment_Splenectomy_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                               :Treatment ;
+                                                      :hasTreatmentCost :SCD_Cost_Treatment_Splenectomy ;
+                                                      :hasTreatmentGuidelines :SCD_Guidelines_Treatment_Splenectomy_Manif_SplenicSequestration ;
+                                                      :hasDescription "FILL-ME" ;
+                                                      :hasPercentageTreated "0.0105#BETA(2,188)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_Splenectomy_Manif_SplenicSequestrationRecurrent
+:SCD_Treatment_Splenectomy_Manif_SplenicSequestrationRecurrent rdf:type owl:NamedIndividual ,
+                                                                        :Treatment ;
+                                                               :hasTreatmentCost :SCD_Cost_Treatment_Splenectomy ;
+                                                               :hasTreatmentGuidelines :SCD_Guidelines_Treatment_Splenectomy_Manif_SplenicSequestration ;
+                                                               :hasDescription "FILL-ME" ;
+                                                               :hasPercentageTreated "0.5433#BETA(69,58)" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_UciStay_Manif_PneumococcalSepsis
+:SCD_Treatment_UciStay_Manif_PneumococcalSepsis rdf:type owl:NamedIndividual ,
+                                                         :Treatment ;
+                                                :hasTreatmentCost :SCD_Cost_Treatment_UciStay ;
+                                                :hasTreatmentGuidelines :SCD_Guidelines_Treatment_UciStay_Manif_PneumococcalSepsis ;
+                                                :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_UciStay_Manif_SplenicSequestration
+:SCD_Treatment_UciStay_Manif_SplenicSequestration rdf:type owl:NamedIndividual ,
+                                                           :Treatment ;
+                                                  :hasTreatmentCost :SCD_Cost_Treatment_UciStay ;
+                                                  :hasTreatmentGuidelines :SCD_Guidelines_Treatment_UciStay_Manif_SplenicSequestration ;
+                                                  :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Treatment_UciStay_Manif_Stroke
+:SCD_Treatment_UciStay_Manif_Stroke rdf:type owl:NamedIndividual ,
+                                             :Treatment ;
+                                    :hasTreatmentCost :SCD_Cost_Treatment_UciStay ;
+                                    :hasTreatmentGuidelines :SCD_Guidelines_Treatment_UciStay_Manif_Stroke ;
+                                    :hasDescription "FILL-ME" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Utility_Disease_NoSevere
+:SCD_Utility_Disease_NoSevere rdf:type owl:NamedIndividual ,
+                                       :Utility ;
+                              :hasDescription "FILL-ME" ;
+                              :hasKindUtility "UTILITY" ;
+                              :hasTemporalBehavior "ANNUAL" ;
+                              :hasValue "0.9" .
+
+
+###  http://www.semanticweb.org/davidpg/ontologies/2018/3/rare-disease-simulation#SCD_Utility_Disease_Severe
+:SCD_Utility_Disease_Severe rdf:type owl:NamedIndividual ,
+                                     :Utility ;
+                            :hasDescription "FILL-ME" ;
+                            :hasKindUtility "UTILITY" ;
+                            :hasTemporalBehavior "ANNUAL" ;
+                            :hasValue "0.7" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
