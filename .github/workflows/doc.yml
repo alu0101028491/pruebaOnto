@@ -30,7 +30,7 @@ jobs:
           wget $WIDOCO_DOWNLOAD_URL --progress=dot:giga --output-document=jar/widoco.jar
           
       - name: Run Widoco
-        run: java -jar jar/widoco.jar -ontFile rare-disease-simulation_v3.0.owl -rewriteAll -uniteSections -getOntologyMetadata -outFolder .
+        run: java -jar jar/widoco.jar -ontFile rare-disease-simulation_v3.0.owl -rewriteAll -uniteSections -getOntologyMetadata -outFolder doc/ -oops .
 
       - name: Rename index-en.html to index.html
-        run: mv index-en.html index.html
+        run: mv doc/index-en.html doc/index.html
