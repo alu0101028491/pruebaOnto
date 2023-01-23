@@ -34,3 +34,10 @@ jobs:
 
       - name: Rename index-en.html to index.html
         run: mv doc/index-en.html doc/index.html
+      
+      - name: Deploy Documentation to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main
+          folder: main
+          single-commit: true
